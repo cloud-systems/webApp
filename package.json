@@ -4,7 +4,7 @@
   "description": "Basic Express App",
   "main": "index.js",
   "scripts": {
-    "start": "npm run open",
+    "start": "node app.js",
     "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
