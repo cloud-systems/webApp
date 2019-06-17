@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amruth21/expressWebApp.git"
+    "url": "git+https://github.com/cloud-systems/webApp.git"
   },
   "author": "Amruth Nare",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amruth21/expressWebApp/issues"
+    "url": "https://github.com/cloud-systems/webApp/issues"
   },
-  "homepage": "https://github.com/amruth21/expressWebApp#readme",
+  "homepage": "https://github.com/cloud-systems/webApp#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.0",
