@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        <link type="text/css" rel="stylesheet" href="css\style.css"/>
+        <title>Cloud Systems</title>
+    
+    </head>
+
+    <body>
+        <div style="text-align: center"> 
+            <h1 class="display-4 jumbo-title">Cloud Systems<i class="fal fa-cloud"></i></h1> 
+        </div> 
+
+        <center>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./projects.html">Projects</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./gallery.html">Gallery</a></li>
+            </ul>
+          </center>
+
+        <div class="container">
+            <form action="action_page.php" method="POST">
+          
+              <label for="name"> Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+          
+              <label for="role">Company/Role</label>
+              <input type="text" id="role" name="role" placeholder="Role/Company">
+          
+              <label for="email">Email</label>
+              <input type="email" name="email" placeholder="Email">
+          
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit" onclick="myFunction();">
+          
+            </form>
+         </div>
+        <script>
+        function myFunction() {
+            alert("Clicked");
+            //return true;
+        }
+        
+        </script>
+
+    </body>
+
+</html>
