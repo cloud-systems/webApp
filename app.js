@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs')
 const path = require('path');
 const bodyParser = require('body-parser');
 const multer = require('multer');
@@ -9,23 +10,18 @@ const port = 1234;
 
 app.use(bodyParser.json());
 
-app.use(express.static('src'));
+app.use(express.static('src/public'));
 
-app.get('/', function(req, res) {
-    //res.send("This is home page")
-    res.sendFile(path.join(__dirname, '/src/pages/index.html'))
+app.get('/', (req, res) => {
+    res.contentType('html')
+    res.send(fs.readFileSync(__dirname + '/src/pages/index.html'))
 })
 
-app.get('/contact', function(req, res){
-    res.sendFile(path.join(__dirname, '/src/pages/contact.html'))
-})
-
-app.get('/gallery', function(req, res){
-    res.sendFile(path.join(__dirname, '/src/pages/gallery.html'))
-})
-
-app.get('/projects', function(req, res){
-    res.sendFile(path.join(__dirname, '/src/pages/projects.html'))
+app.get('/*', (req, res) => {
+    const suffix = (req.params['0'].includes('.')) ? '' : '.html'
+    const path = __dirname + '/src/pages/' + req.params['0'] + suffix
+    res.contentType('html')
+    res.send(fs.readFileSync(path))
 })
 
 
